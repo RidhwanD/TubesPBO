@@ -22,7 +22,6 @@ create table barang_penyedia (
 	id_barang int primary key,
 	nama_barang varchar(20),
 	jumlah int,
-	kondisi varchar(20),
 	constraint fkbp foreign key (id_penyedia) references penyedia (id_penyedia)
 );
 
@@ -31,6 +30,7 @@ create table barang_gudang (
 	id_barang int primary key,
 	nama_barang varchar(20),
 	jumlah int,
-	kondisi varchar(20),
+	kondisi_baik int,
+	kondisi_buruk int,
 	constraint fkbg foreign key (id_gudang) references gudang (id_gudang)
 );
