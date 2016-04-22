@@ -9,6 +9,7 @@ import inventaris.Barang;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.util.ArrayList;
+import javax.swing.JButton;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -197,15 +198,15 @@ public class Penyedia extends javax.swing.JPanel {
         return (Integer) spinJumBarang.getValue();
     }
 
-    public Object simpanButtonPressed(){
+    public JButton simpanButtonPressed(){
         return btnSimpan;
     }
     
-    public Object editButtonPressed(){
+    public JButton editButtonPressed(){
         return btnEdit;
     }
     
-    public Object deleteButtonPressed(){
+    public JButton deleteButtonPressed(){
         return btnHapus;
     }
     

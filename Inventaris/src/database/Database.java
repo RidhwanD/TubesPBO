@@ -260,4 +260,20 @@ public class Database {
             System.out.println(ex);
         }
     }
+    
+    public ArrayList<Barang> cariBarangGudang(String kunci, int idGudang){
+        ArrayList<Barang> db = new ArrayList();
+        String s = "select * from barang_gudang where (id_barang = '"+kunci+"' or nama_barang = '"+kunci+"' or jumlah = '"+kunci
+                +"' or kondisi_baik = '"+kunci+"' or kondisi_buruk = '"+kunci+"') and id_gudang = "+idGudang;
+        rs = getData(s);
+        try {
+            while (rs.next()){
+                Barang b = new Barang(rs.getInt(2), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getInt(6));
+                db.add(b);
+            }
+        } catch (Exception e){
+            e.getStackTrace();
+        }
+        return db;
+    }
 }

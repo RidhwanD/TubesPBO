@@ -26,6 +26,14 @@ public class Barang {
         kondisiBuruk = 0;
         this.idLama = id;
     }
+    
+    public Barang(int id, String nama, int jumlah, int kondisiBaik, int kondisiButuk) {
+        idBarang = id;
+        namaBarang = nama;
+        this.jumlah = jumlah;
+        this.kondisiBaik = kondisiBaik;
+        this.kondisiBuruk = kondisiBuruk;
+    }
 
     public void setID(int id) {
         idBarang = id;

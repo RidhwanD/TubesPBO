@@ -98,16 +98,7 @@ public class Gudang {
         }
         return t;
     }
-    /*
-    public ArrayList<Barang> cariKondisi(String kondisi){
-        ArrayList<Barang> t = new ArrayList<>();
-        for (Barang b : daftarBarang){
-            if (b.getKondisi().equalsIgnoreCase(kondisi))
-                t.add(b);
-        }
-        return t;
-    }
-    */
+    
     public Barang loadBarang(int n){
         return daftarBarang.get(n);
     }

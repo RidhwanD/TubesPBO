@@ -10,6 +10,7 @@ import inventaris.Orang;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.util.ArrayList;
+import javax.swing.JButton;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -389,15 +390,15 @@ public class Admin extends javax.swing.JPanel {
         return spinIDPenggunaKelola.isEnabled();
     }
     
-    public Object simpanButtonPressed(){
+    public JButton simpanButtonPressed(){
         return btnSimpanPengguna;
     }
     
-    public Object editButtonPressed(){
+    public JButton editButtonPressed(){
         return btnEditPengguna;
     }
     
-    public Object deleteButtonPressed(){
+    public JButton deleteButtonPressed(){
         return btnHapusPengguna;
     }
 
@@ -480,15 +481,15 @@ public class Admin extends javax.swing.JPanel {
         return spinIDGudangKelola.isEnabled();
     }
     
-    public Object simpanBtnPressed(){
+    public JButton simpanBtnPressed(){
         return simpanGudangButton;
     }
     
-    public Object editBtnPressed(){
+    public JButton editBtnPressed(){
         return editGudangButton;
     }
     
-    public Object deleteBtnPressed(){
+    public JButton deleteBtnPressed(){
         return hapusButtonGudang;
     }
     

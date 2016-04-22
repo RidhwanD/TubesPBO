@@ -379,4 +379,8 @@ public class Aplikasi {
         }
         return null;
     }
+    
+    public ArrayList<Barang> cariBarangGudang(String kunci, int idGudang){
+        return db.cariBarangGudang(kunci, idGudang);
+    }
 }
