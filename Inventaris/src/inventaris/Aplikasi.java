@@ -341,11 +341,11 @@ public class Aplikasi {
         }
     }
 
-    public void menuPtEditBrg(Petugas pt, Gudang g, int id, int baik) {
+    public void menuPtEditBrg(Petugas pt, Gudang g, int id, int baik, int jumlah) {
         int i = g.findBarang(id);
         if (i != -1) {
             pt.ubahBarang(g, id, baik);
-            db.updateBarang(g, id, baik);
+            db.updateBarang(g, id, baik, jumlah);
             System.out.println("Data sudah di-update");
         } else {
             System.out.println("Data barang tidak ada");
@@ -382,5 +382,13 @@ public class Aplikasi {
     
     public ArrayList<Barang> cariBarangGudang(String kunci, int idGudang){
         return db.cariBarangGudang(kunci, idGudang);
+    }
+    
+    public ArrayList<Gudang> getAllGudang(){
+        return db.readAllGudang();
+    }
+    
+    public int getJumBarangGudang(){
+        return db.getJumBarangGudang();
     }
 }

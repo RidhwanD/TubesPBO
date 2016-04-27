@@ -6,6 +6,7 @@
 package viewConsole;
 
 import inventaris.Aplikasi;
+import inventaris.Barang;
 import inventaris.Gudang;
 import inventaris.Penyedia;
 import inventaris.Petugas;
@@ -89,9 +90,10 @@ public class Console {
                             System.out.print("ID barang diubah\t: ");
                             int id = inputInteger();
                             if (g.findBarang(id)!=-1){
+                                Barang b = g.getBarang(id);
                                 System.out.print("Barang Baik\t\t: ");
                                 int k = inputInteger();
-                                model.menuPtEditBrg(pt, g, id, k);
+                                model.menuPtEditBrg(pt, g, id, k, b.getJumlah());
                             } else
                                 System.out.println("Barang tidak ada");
                         } else {

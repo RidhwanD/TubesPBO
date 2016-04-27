@@ -27,12 +27,12 @@ public class Barang {
         this.idLama = id;
     }
     
-    public Barang(int id, String nama, int jumlah, int kondisiBaik, int kondisiButuk) {
+    public Barang(int id, String nama, int jumlah, int kondisiBaik) {
         idBarang = id;
         namaBarang = nama;
         this.jumlah = jumlah;
         this.kondisiBaik = kondisiBaik;
-        this.kondisiBuruk = kondisiBuruk;
+        this.kondisiBuruk = jumlah-kondisiBaik;
     }
 
     public void setID(int id) {
